@@ -20,27 +20,23 @@
   @import url('https://fonts.cdnfonts.com/css/backstreet');
 
   #header {
-    /* background-image: url(photos/Untitled\ design\ \(1\).png); */
     background-size: cover;
     color: white;
-    /* background-position: center; */
-    /* background-repeat: no-repeat; */
     padding-top: 90px;
     height: 250px;
     width: 100%;
-    background-color: black;
+    /* background-color: black; */
     line-height: 5px;
+    letter-spacing: 3px;
   }
   #sp1 {
-    /* font-family: 'Code Light', sans-serif; */
     font-family: 'Code Bold', sans-serif;
-    
     font-size: 2rempx;
     color: white;
   }
   #sp {
+    text-shadow: 2px 2px 2px rgb(255, 255, 255);
     font-family: 'Funky', sans-serif;
-    /* font-family: 'Twilight', sans-serif;                                      */
     font-size: 40px;
   }
   #headerimg {
@@ -48,10 +44,7 @@
     width: 100%;    
   }
   
-  /* #asdf {
-    /* height: 188px; */
-    /* width: 300px; */
-  
+ 
   #homecontent {
     
     display: flex;
@@ -66,7 +59,7 @@
   width: 320px;
   border-radius: 24px;
   line-height: 1.6;
-  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+  /* transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1); */
 }
 
 .content {
@@ -78,85 +71,19 @@
   border-radius: 22px;
   color: #ffffff;
   overflow: hidden;
-  background: #0a3cff;
+  /* background: #0a3cff; */
+  background-color: rgba(0, 0, 0, 0.7); 
   transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
-  box-shadow: 0px 0px 20px rgb(45, 35, 35);
+  box-shadow: 0px 0px 20px rgb(255, 251, 251);
 
 }
 
-/* .content::before {
-  position: absolute;
-  content: "";
-  top: -4%;
-  left: 50%;
-  width: 90%;
-  height: 8When did you play Vardha Lai Vaada? I. Video. White Duo's bottle photography, photography, photography. From the video. 0%;
-  transform: translate(-50%);
-  background: #ced8ff;
-  z-index: -1;
-  transform-origin: bottom;
-
-  border-radius: inherit;
-  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
-} */
-
-/* .content::after {
-  position: absolute;
-  content: "";
-  top: -8%;
-  left: 50%;
-  width: 80%;
-  height: 80%;
-  transform: translate(-50%);
-  background: #e7ecff;
-  z-index: -2;
-  transform-origin: bottom;
-  border-radius: inherit;
-  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1); */
-/* } */
 
 .content svg {
   width: 40px;
   height: 40px;
 }
 
-/* .content .para {
-  z-index: 1;
-  opacity: 1;
-  font-size: 18px;
-  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
-} */
-
-/* .content .link {
-  z-index: 1;
-  color: #fea000;
-  text-decoration: none;
-  font-family: inherit;
-  font-size: 16px;
-  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
-} */
-
-/* .content .link:hover {
-  text-decoration: underline;
-} */
-
-/* .card1:hover {
-  transform: translate(0px, -16px);
-} */
-
-/* .card1:hover .content::before {
-  rotate: -8deg;
-  top: 0;
-  width: 100%;
-  height: 100%;
-} */
-
-/* .card1:hover .content::after {
-  rotate: 8deg;
-  top: 0;
-  width: 100%;
-  height: 100%;
-} */
 #date {
   line-height: 2px;
   font-family: 'milies', sans-serif;
@@ -166,22 +93,23 @@
 }
 foot {
   background-image: url(photos/IMG_3289.JPG);
-  background-size: cover;
+  background-size: contain;
   color: white;
-  height: 100px;
-  width: 100px;
+  height: 120px;
+  width: 150px;
   line-height: 15px;
   padding: 25px;
 }
 #no{
   color: white;
-  font-size: 2rem  ;
+  font-size: 2.5rem  ;
 }
 #info {
   color: white;
 }
 #tech,#non-tech {
   width: 40%;
+  font-size: 1.5rem;
   font-family: 'Backstreet', sans-serif;
                                                 
 }
@@ -192,6 +120,7 @@ foot {
   font-family: 'Code Bold', sans-serif;
   font-weight: 300;
   font-size: 20px;
+  text-shadow: 2px 2px 4px black, -2px -2px 4px gray;
 }
 .two{
   font-family: 'prompt', sans-serif;
@@ -256,7 +185,19 @@ button:hover .play {
   transform: translateX(200%);
   transition-delay: 300ms;
 }
-
+#body1 {
+  display: flex;
+  justify-content: center;  /* Horizontally center the child */
+  align-items: center;
+}
+#myVideo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  min-width: 100%; 
+  min-height: 100%;
+}
 }
 
 

@@ -22,7 +22,6 @@
       padding-top: 90px;
       height: 250px;
       width: 100%;
-      /* background-color: black; */
       line-height: 5px;
       letter-spacing: 3px;
     }
@@ -112,7 +111,6 @@
     justify-content: center;
     gap: 10px;
     padding: 0 10px;
-    color: white;
     text-shadow: 2px 2px rgb(116, 116, 116);
     text-transform: uppercase;
     cursor: pointer;
@@ -183,4 +181,9 @@
 }
 body {
     overflow-x: hidden;
+}
+#bu {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
 }

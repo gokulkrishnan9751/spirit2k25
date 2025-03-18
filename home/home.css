@@ -177,7 +177,7 @@
   
 #foot {
     background-color: black;
-    margin-top: -12px;
+    /* margin-top: -12px; */
     height: 180px;
 }
 body {

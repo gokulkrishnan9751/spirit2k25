@@ -21,7 +21,7 @@ footer {
     font-weight: 600;
     height: 120px;
 }
-.slide {
+.slides {
     justify-content: center;
     margin: 20px 29px;
   }
@@ -78,7 +78,7 @@ footer {
     border-radius: 15px;
   }
  
-  .slides {
+  /* .slider {
     display: flex;
     flex-direction: row;
     gap: 30px;
@@ -87,8 +87,6 @@ footer {
     padding-left: 40px;
     scroll-snap-type: x mandatory;
     overflow-x: scroll;
-    -webkit-overflow-scrolling: touch;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
   }
   ::-webkit-scrollbar {
     width: 12px;
@@ -105,71 +103,106 @@ footer {
     border-radius: 10px;
   }
   
-::-webkit-scrollbar-thumb:hover {
-  background: #231c1c;
-}
-
-#but {
-  border: 3px solid #315cfd;
-  transition: all 0.3s;
-  cursor: pointer;
-  background: white;
-  font-size: 1rem;
-}
-#but:hover {
-  background: #000000;
-  color: white;
-  font-size: 1.7rem;
-}
-#anker {
-  text-decoration: none;
-  font-family: 'Code Bold', sans-serif; 
-  font-weight: 900;
-}
-#but{
-  border-radius: 20px;
-  padding: 5px 20px;
-}
-@media screen and (max-width: 769px) {
-  .slide {
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #231c1c;
+  } */
   
-  .prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
+  #but {
+    border: 3px solid #315cfd;
+    transition: all 0.3s;
     cursor: pointer;
-    padding: 10px 15px;
-    font-size: 24px;
+    background: white;
+    font-size: 1rem;
   }
+  #but:hover {
+    background: #000000;
+    color: white;
+    font-size: 1.7rem;
+  }
+  #anker {
+    text-decoration: none;
+    font-family: 'Code Bold', sans-serif; 
+    font-weight: 900;
+  }
+  #but{
+    border-radius: 20px;
+    padding: 5px 20px;
+  }
+@media screen and (max-width: 786px) {
 
-.prev { left: 10px; }
-.next { right: 10px; }
-
-.slider {
+.carousel {
   position: relative;
   width: 100%;
-  overflow: hidden;
-  border-radius: 10px;
-  /* padding: 50px; */
-  
+  height: 100%;
+  /* overflow: hidden; */
 }
 
-.slides {
+.slider {
   display: flex;
-  transition: transform 0.7s ease-in-out;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
-.slide {
-  min-width: 100%;
-  position: relative;
+.text {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.prev {
+  left: 10px;
+  transform: translateY(-50%);
+}
+
+.next {
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: rgba(209, 194, 194, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dot.active {
+  background: rgb(130, 80, 80);
+}
+.slides {
+  transition: transform 10s ease-in-out;
+
 }
 }
+
 
 

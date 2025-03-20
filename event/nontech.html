@@ -13,24 +13,25 @@
 	<header>
         <p>NoN-Tech Event</p>
     </header>
-    <section class="container2">
-        <div class="cardbody">
-            <div class="card">
-                <div class="card-image">
-                    <img src="photos/WhatsApp Image 2025-03-18 at 3.46.49 PM.jpeg" alt="" id="image">
+    <div class="carousel">
+        <div class="slider">
+            <div class="slides">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="photos/WhatsApp Image 2025-03-18 at 3.46.49 PM.jpeg" alt="" id="image">
+                    </div>
+                    <p class="card-title">Short Film</p>
+                    <p class="card-body">
+                        <ol>
+                            <li>Film must be within 4 - 5 minutes (Our own genre)</li>
+                            <li>Take a film in pendrive and project in auditorium </li>
+                            <li>Judgement will given based on editing, story, dubbing</li>
+                        </ol>
+                    </p>
+                    <p class="footer">Timing   <span class="by-name">4/5/2025</span> <span class="date"> </span></p>
                 </div>
-                <p class="card-title">Short Film</p>
-                <p class="card-body">
-                    <ol>
-                        <li>Film must be within 4 - 5 minutes (Our own genre)</li>
-                        <li>Take a film in pendrive and project in auditorium </li>
-                        <li>Judgement will given based on editing, story, dubbing</li>
-                    </ol>
-                </p>
-                <p class="footer">Timing   <span class="by-name">4/5/2025</span> <span class="date"> </span></p>
             </div>
-        </div>
-            <div class="cardbody">
+            <div class="slides">
                 <div class="card">
                     <div class="card-image">
                         <img src="photos/WhatsApp Image 2025-03-18 at 4.03.12 PM.jpeg" alt="" id="image">
@@ -46,7 +47,7 @@
                     <p class="footer">Timing <span class="by-name">4/5/2025</span> <span class="date"></span></p>
                 </div>
             </div>
-            <div class="cardbody">
+            <div class="slides">
                 <div class="card">
                     <div class="card-image">
                         <img src="photos/WhatsApp Image 2025-03-18 at 4.14.58 PM.jpeg" alt=" " id="image">
@@ -63,7 +64,7 @@
                     <p class="footer">Timing <span class="by-name">4/3/2025</span><span class="date"></span></p>
                 </div>
             </div>
-            <div class="cardbody">
+            <div class="slides">
                 <div class="card">
                     <div class="card-image">
                         <img src="photos/WhatsApp Image 2025-03-18 at 4.44.31 PM.jpeg" alt="" id="image">
@@ -75,12 +76,12 @@
                             <li>The player who is succeeds in flipping the bottle can move their bottle from its center</li>
                             <li>Once the player reach the edge box they are declared as winner if they failed that team member will be disqualified & other will continue</li>
                         </ol>
-                        
+
                     </p>
                     <p class="footer">Timing <span class="by-name">4/3/2025</span> on <span class="date"></span></p>
                 </div>
             </div>
-            <div class="cardbody">
+            <div class="slides">
                 <div class="card">
                     <div class="card-image">
                         <img src="" alt="" id="image">
@@ -92,7 +93,61 @@
                     <p class="footer">Timing <span class="by-name">4/3/2025</span> on <span class="date"></span></p>
                 </div>
             </div>
-            
-        </section>
+        </div>
+
+        <button class="prev" onclick = "moveSlide(-1)">❮</button>
+        <button class="next" onclick="moveSlide(1)">❯</button>
+        <br><br>
+        <div class="dots">
+            <span class="dot" onclick="setSlide(0)"></span>
+            <span class="dot" onclick="setSlide(1)"></span>
+            <span class="dot" onclick="setSlide(2)"></span>
+            <span class="dot" onclick="setSlide(3)"></span>
+            <span class="dot" onclick="setSlide(4)"></span>
+        </div>
+    </div>
     </body>
+    <script>
+        let slideIndex = 0;
+        const slides = document.getElementsByClassName("slides");
+        const dots = document.getElementsByClassName("dot");
+
+        function showSlide(index) {
+            if (index >= slides.length) {
+                slideIndex = 0;
+            } else if (index < 0) {
+                slideIndex = slides.length - 1;
+            } else {
+                slideIndex = index;
+            }
+            
+            // Hide all slides
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            
+            // Remove active class from dots
+            for (let i = 0; i < dots.length; i++){
+                dots[i].classList.remove("active");
+            }
+            
+            // Show the current slide and set active dot
+            slides[slideIndex].style.display = "block";
+            if (dots[slideIndex]) {
+                dots[slideIndex].classList.add("active");
+            }
+        }
+
+        // Initialize slide display
+        showSlide(slideIndex);
+
+        function moveSlide(n) {
+            showSlide(slideIndex + n);
+        }
+
+        function setSlide(index) {
+            showSlide(index);
+        }
+
+    </script>
 </html>

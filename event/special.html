@@ -14,48 +14,96 @@
 	<header>
         <p>Online Game</p>
     </header>
-    <section class="container2">
-        <div class="cardbody">
-            <div class="card">
-                <div class="card-image">
-                    <img src="" alt="" id="image">
+    <div class="carousel">
+        <div class="slider">
+            <div class="slides">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="" alt="" id="image">
+                    </div>
+                    <p class="card-title">Power Point Presentation</p>
+                    <p class="card-body">
+                        Nullam ac tristique nulla, at convallis quam. Integer consectetur mi nec magna tristique, non lobortis.
+                    </p>
+                    <p class="footer">Written by <span class="by-name">John Doe</span> on <span class="date">25/05/23</span></p>
                 </div>
-                <p class="card-title">Power Point Presentation</p>
-                <p class="card-body">
-                    Nullam ac tristique nulla, at convallis quam. Integer consectetur mi nec magna tristique, non lobortis.
-                </p>
-                <p class="footer">Written by <span class="by-name">John Doe</span> on <span class="date">25/05/23</span></p>
+            </div>
+            <div class="slides">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="" alt="" id="image">
+                    </div>
+                    <p class="card-title">Code Crack</p>
+                    <p class="card-body">
+                        Nullam ac tristique nulla, at convallis quam. Integer consectetur mi nec magna tristique, non lobortis.
+                    </p>
+                    <p class="footer">Written by <span class="by-name">John Doe</span> on <span class="date">25/05/23</span></p>
+                </div>
+            </div>
+            <div class="slides">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="" alt=" " id="image">
+                    </div>
+                    <p class="card-title">Web Design</p>
+                    <p class="card-body">
+                        Nullam ac tristique nulla, at convallis quam. Integer consectetur mi nec magna tristique, non lobortis.
+                    </p>
+                    <p class="footer">Written by <span class="by-name">John Doe</span> on <span class="date">25/05/23</span></p>
+                </div>
             </div>
         </div>
-        <div class="cardbody">
-            <div class="card">
-                <div class="card-image">
-                    <img src="" alt="" id="image">
-                </div>
-                <p class="card-title">Code Crack</p>
-                <p class="card-body">
-                    Nullam ac tristique nulla, at convallis quam. Integer consectetur mi nec magna tristique, non lobortis.
-                </p>
-                <p class="footer">Written by <span class="by-name">John Doe</span> on <span class="date">25/05/23</span></p>
-            </div>
+        <button class="prev" onclick = "moveSlide(-1)">❮</button>
+        <button class="next" onclick="moveSlide(1)">❯</button>
+        <br> <br>
+        <div class="dots">
+            <span class="dot" onclick="setSlide(0)"></span>
+            <span class="dot" onclick="setSlide(1)"></span>
+            <span class="dot" onclick="setSlide(2)"></span>
         </div>
-        <div class="cardbody">
-            <div class="card">
-                <div class="card-image">
-                    <img src="" alt=" " id="image">
-                </div>
-                <p class="card-title">Web Design</p>
-                <p class="card-body">
-                    Nullam ac tristique nulla, at convallis quam. Integer consectetur mi nec magna tristique, non lobortis.
-                </p>
-                <p class="footer">Written by <span class="by-name">John Doe</span> on <span class="date">25/05/23</span></p>
-            </div>
-        </div>
-    </section>
-        
-	
-		
-
-</body>
+    </div>
     
+</body>
+	<script>
+        let slideIndex = 0;
+        const slides = document.getElementsByClassName("slides");
+        const dots = document.getElementsByClassName("dot");
+
+        function showSlide(index) {
+            if (index >= slides.length) {
+                slideIndex = 0;
+            } else if (index < 0) {
+                slideIndex = slides.length - 1;
+            } else {
+                slideIndex = index;
+            }
+            
+            // Hide all slides
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            
+            // Remove active class from dots
+            for (let i = 0; i < dots.length; i++){
+                dots[i].classList.remove("active");
+            }
+            
+            // Show the current slide and set active dot
+            slides[slideIndex].style.display = "block";
+            if (dots[slideIndex]) {
+                dots[slideIndex].classList.add("active");
+            }
+        }
+
+        // Initialize slide display
+        showSlide(slideIndex);
+
+        function moveSlide(n) {
+            showSlide(slideIndex + n);
+        }
+
+        function setSlide(index) {
+            showSlide(index);
+        }
+    </script>
 </html>

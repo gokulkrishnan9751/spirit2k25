@@ -1,26 +1,5 @@
 @import url('https://fonts.cdnfonts.com/css/code');
-header
-{
-    background-color: #004e9c;
-    color: white;
-    /* padding: 0px 0px; */
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: 600;
-    font-family: 'Code Bold', sans-serif;                                                                     
-    letter-spacing: 5px;      
-    padding-top: 20px;                                                                                 
-}
-footer {
-    background-color: #000000;
-    color: white;
-    padding: 10px 10px;
-    padding-bottom: 10px;
-    text-align: center;
-    font-size: 20px;
-    font-weight: 600;
-    height: 120px;
-}
+
 .slides {
     justify-content: center;
     margin: 20px 29px;
@@ -33,6 +12,7 @@ footer {
     background: #e8e8e8;
     box-shadow: 5px 5px 6px #dadada,-5px -5px 6px #f6f6f6;
     transition: 0.4s;
+    line-height: 20px;
   }
   
   .card:hover {
@@ -40,26 +20,27 @@ footer {
   }
   
   .card-title {
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 900;
     color: #2e54a7;
     font-family: 'Code Bold', sans-serif;   
-    margin-top: 40px;
+    margin-top: 25px;
     margin-left: 20px;
   }
   
   .card-image {
-    min-height: 170px;
+    height: 170px;
     background-color: #c9c9c9;
     border-radius: 15px;
     box-shadow: inset 8px 8px 10px #c3c3c3,
     inset -8px -8px 10px #cfcfcf;
+    overflow: hidden;
   }
   
   .card-body {
     margin-top: -30px;
     color: rgb(0, 0, 0);
-    font-size: 15px;
+    /* font-size: 12px; */
   }
   
   .footer {
@@ -77,17 +58,84 @@ footer {
     height: 100%;
     border-radius: 15px;
   }
- 
-  /* .slider {
+  .prev,
+  .next {
+    position: absolute;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  .prev {
+    left: 10px;
+    transform: translateY(-50%);
+  }
+  
+  .next {
+    right: 10px;
+    transform: translateY(-50%);
+  }
+  
+  button:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  .carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     gap: 30px;
     width: 100%;
     overflow-x: auto;
-    padding-left: 40px;
+    padding-left: 10px;
     scroll-snap-type: x mandatory;
     overflow-x: scroll;
   }
+  
+  .text {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  
+  
+  .dots {
+    display: none;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+  display: none;
+  width: 12px;
+  height: 12px;
+  background: rgba(209, 194, 194, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dot.active {
+  background: rgb(130, 80, 80);
+}
+.slides {
+  transition: transform 10s ease-in-out;
+}
+  .prev,
+  .next {
+    display: block;
+  }
+  
   ::-webkit-scrollbar {
     width: 12px;
     height: 10px;
@@ -105,104 +153,12 @@ footer {
   
   ::-webkit-scrollbar-thumb:hover {
     background: #231c1c;
-  } */
-  
-  #but {
-    border: 3px solid #315cfd;
-    transition: all 0.3s;
-    cursor: pointer;
-    background: white;
-    font-size: 1rem;
   }
-  #but:hover {
-    background: #000000;
-    color: white;
-    font-size: 1.7rem;
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
   }
-  #anker {
-    text-decoration: none;
-    font-family: 'Code Bold', sans-serif; 
-    font-weight: 900;
-  }
-  #but{
-    border-radius: 20px;
-    padding: 5px 20px;
-  }
-@media screen and (max-width: 786px) {
-
-.carousel {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  /* overflow: hidden; */
-}
-
-.slider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-}
-
-.text {
-  background: rgba(0, 0, 0, 0.4);
-  padding: 10px 20px;
-  border-radius: 5px;
-}
-
-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  font-size: 20px;
-  cursor: pointer;
-  border-radius: 50%;
-}
-
-.prev {
-  left: 10px;
-  transform: translateY(-50%);
-}
-
-.next {
-  right: 10px;
-  transform: translateY(-50%);
-}
-
-button:hover {
-  background: rgba(0, 0, 0, 0.8);
-}
-
-.dots {
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 8px;
-}
-
-.dot {
-  width: 12px;
-  height: 12px;
-  background: rgba(209, 194, 194, 0.5);
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.dot.active {
-  background: rgb(130, 80, 80);
-}
-.slides {
-  transition: transform 10s ease-in-out;
-
-}
-}
-
 
 

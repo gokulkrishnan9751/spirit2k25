@@ -10,33 +10,44 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <p>Tech Event</p>
-    </header>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">Tech Event</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link ative" href="/index.html" target="events">Home</a></li>
+                    <li class="nav-item"><a class="nav-link ative" href="techevent.html" target="events">Tech-Event</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nontech.html" target="events">Non-Tech Event</a></li>
+                    <li class="nav-item"><a class="nav-link" href="special.html" target="events">Online Game</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/register/resgister.html" target="events">Registeration</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
     <div class="carousel">
-
-        <div class="slider">
             <div class="slides">
                 <div class="card">
                 <div class="card-image">
-                    <img src="photos/IMG_3333.JPG" alt="" id="image">
+                    <img src="photos/WhatsApp Image 2025-03-22 at 22.51.25_24ef4307.jpg " alt="" id="image">
                 </div>
                 <p class="card-title">Power Point Presentation</p>
                 <p class="card-body">
                     <ol>
-                        <li>Theme : General Tech</li>
-                    <li>No of participants : 3 - 4 per team </li>
-                    <li>Best PPT's will choosen based on content structure prensatation and team work</li>
+                        <li><b>Theme </b>: General Tech</li>
+                    <li>The number of participants per team should be between 3 and 4. </li>
+                    <li> The presentation will be evaluated based on content quality, structure, design, clarity, and teamwork</li>
                    </ol>
                    
                 </p>
-                <p class="footer">Timing <span class="by-name">  4/3/2025  </span> on <span class="date">full day</span></p>
+                <p class="footer">Timing <span class="by-name">  4/3/2025  </span> on <span class="date"><br>session :- <br> session :-</span></p>
             </div>
         </div>
         <div class="slides">
             <div class="card">
                 <div class="card-image">
-                    <img src="photos/WhatsApp Image 2025-03-18 at 2.31.04 PM.jpeg" alt="" id="image">
+                    <img src="photos/WhatsApp Image 2025-03-22 at 22.44.22_3866f3e3.jpg" alt="" id="image">
                 </div>
                 <p class="card-title">Code Crack</p>
                 <p class="card-body">
@@ -52,23 +63,23 @@
         <div class="slides">
             <div class="card">
                 <div class="card-image">
-                    <img src="photos/IMG_3335.JPG" alt=" " id="image">
+                    <img src="photos/WhatsApp Image 2025-03-22 at 23.07.47_1105f4d3.jpg" alt=" " id="image">
                 </div>
                 <p class="card-title">Web Design</p>
                 <p class="card-body">
                     <ol>
                         <li>Participants must design a website on a specfic theme provided event oranginzers </li>
-                        <li>No of participants : 1 - 3 per team (or individual) </li>
-                        <li>participants tool : VS Code (HTM:, CSS)</li>
+                        <li>The number of participants per team can range from 1 to 3 (or) individual. </li>
+                        <li>Participants' tools: VS Code</li>
                     </ol>
                 </p>
-                <p class="footer">Timing <span class="by-name">25/05/23</span> <span class="date"> <br></span> session  1 -> 11:00 to 11:45</span> <br> <span>session 2 - 12:00 to 12:45</span></p>
+                <p class="footer">Timing <span class="by-name">25/05/23</span> <span class="date"> <br></span> session  1 - 11:00 to 11:45</span> <br> <span>session 2 - 12:00 to 12:45</span></p>
             </div>
         </div>
         <div class="slides">
             <div class="card">
                 <div class="card-image">
-                    <img src="photos/WhatsApp Image 2025-03-18 at 2.44.14 PM.jpeg" alt="" id="image">
+                    <img src="photos/WhatsApp Image 2025-03-22 at 23.12.01_ec40bdef.jpg" alt="" id="image">
                 </div>
                 <p class="card-title">Tech Quiz</p>
                 <p class="card-body">
@@ -84,7 +95,7 @@
         <div class="slides">
             <div class="card">
                 <div class="card-image">
-                    <img src="photos/WhatsApp Image 2025-03-18 at 3.06.01 PM.jpeg" alt="" id="image">
+                    <img src="photos/WhatsApp Image 2025-03-22 at 22.56.19_9c065564.jpg" alt="" id="image">
                 </div>
                 <p class="card-title">Prompt Engineering</p>
                 <p class="card-body">
@@ -98,58 +109,9 @@
             </div>
         </div>
     </div>
-    <button class="prev" onclick = "moveSlide(-1)">❮</button>
-        <button class="next" onclick="moveSlide(1)">❯</button>
-        <br><br>
-        <div class="dots">
-            <span class="dot" onclick="setSlide(0)"></span>
-            <span class="dot" onclick="setSlide(1)"></span>
-            <span class="dot" onclick="setSlide(2)"></span>
-            <span class="dot" onclick="setSlide(3)"></span>
-            <span class="dot" onclick="setSlide(4)"></span>
-        </div>
-    </div>
+    <footer>
+        <div><button class="prev" onclick = "moveSlide(-1)">❮</button></div>
+        <div><button class="next" onclick="moveSlide(1)">❯</button></div>
+  `  </footer>
 </body>
-<script>
-    let slideIndex = 0;
-    const slides = document.getElementsByClassName("slides");
-    const dots = document.getElementsByClassName("dot");
-
-    function showSlide(index) {
-        if (index >= slides.length) {
-            slideIndex = 0;
-        } else if (index < 0) {
-            slideIndex = slides.length - 1;
-        } else {
-            slideIndex = index;
-        }
-        
-        // Hide all slides
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        
-        // Remove active class from dots
-        for (let i = 0; i < dots.length; i++){
-            dots[i].classList.remove("active");
-        }
-        
-        // Show the current slide and set active dot
-        slides[slideIndex].style.display = "block";
-        if (dots[slideIndex]) {
-            dots[slideIndex].classList.add("active");
-        }
-    }
-
-    // Initialize slide display
-    showSlide(slideIndex);
-
-    function moveSlide(n) {
-        showSlide(slideIndex + n);
-    }
-
-    function setSlide(index) {
-        showSlide(index);
-    }
-</script>
 </html>

@@ -10,100 +10,63 @@
     <link href="https://fonts.cdnfonts.com/css/code" rel="stylesheet">                           
                 
 </head>
-<body>
-	<header>
-        <p>Online Game</p>
-    </header>
-    <div class="carousel">
-        <div class="slider">
-            <div class="slides">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="" alt="" id="image">
-                    </div>
-                    <p class="card-title">Power Point Presentation</p>
-                    <p class="card-body">
-                        Nullam ac tristique nulla, at convallis quam. Integer consectetur mi nec magna tristique, non lobortis.
-                    </p>
-                    <p class="footer">Written by <span class="by-name">John Doe</span> on <span class="date">25/05/23</span></p>
-                </div>
-            </div>
-            <div class="slides">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="" alt="" id="image">
-                    </div>
-                    <p class="card-title">Code Crack</p>
-                    <p class="card-body">
-                        Nullam ac tristique nulla, at convallis quam. Integer consectetur mi nec magna tristique, non lobortis.
-                    </p>
-                    <p class="footer">Written by <span class="by-name">John Doe</span> on <span class="date">25/05/23</span></p>
-                </div>
-            </div>
-            <div class="slides">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="" alt=" " id="image">
-                    </div>
-                    <p class="card-title">Web Design</p>
-                    <p class="card-body">
-                        Nullam ac tristique nulla, at convallis quam. Integer consectetur mi nec magna tristique, non lobortis.
-                    </p>
-                    <p class="footer">Written by <span class="by-name">John Doe</span> on <span class="date">25/05/23</span></p>
-                </div>
-            </div>
-        </div>
-        <button class="prev" onclick = "moveSlide(-1)">❮</button>
-        <button class="next" onclick="moveSlide(1)">❯</button>
-        <br> <br>
-        <div class="dots">
-            <span class="dot" onclick="setSlide(0)"></span>
-            <span class="dot" onclick="setSlide(1)"></span>
-            <span class="dot" onclick="setSlide(2)"></span>
+<body><nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="#">Online Game</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link ative" href="/index.html" target="events">Home</a></li>
+                <li class="nav-item"><a class="nav-link ative" href="techevent.html" target="events">Tech-Event</a></li>
+                <li class="nav-item"><a class="nav-link" href="nontech.html" target="events">Non-Tech Event</a></li>
+                <li class="nav-item"><a class="nav-link" href="special.html" target="events">Online Game</a></li>
+                <li class="nav-item"><a class="nav-link" href="/register/resgister.html" target="events">Registeration</a></li>
+            </ul>
         </div>
     </div>
-    
+</nav>
+    <div class="carousel">
+        <div class="slides">
+            <div class="card">
+                <div class="card-image">
+                    <img src="" alt="" id="image">
+                </div>
+                <p class="card-title">Power Point Presentation</p>
+                <p class="card-body">
+                    Nullam ac tristique nulla, at convallis quam. Integer consectetur mi nec magna tristique, non lobortis.
+                </p>
+                <p class="footer">Written by <span class="by-name">John Doe</span> on <span class="date">25/05/23</span></p>
+            </div>
+        </div>
+        <div class="slides">
+            <div class="card">
+                <div class="card-image">
+                    <img src="" alt="" id="image">
+                </div>
+                <p class="card-title">Code Crack</p>
+                <p class="card-body">
+                    Nullam ac tristique nulla, at convallis quam. Integer consectetur mi nec magna tristique, non lobortis.
+                </p>
+                <p class="footer">Written by <span class="by-name">John Doe</span> on <span class="date">25/05/23</span></p>
+            </div>
+        </div>
+        <div class="slides">
+            <div class="card">
+                <div class="card-image">
+                    <img src="" alt=" " id="image">
+                </div>
+                <p class="card-title">Web Design</p>
+                <p class="card-body">
+                    Nullam ac tristique nulla, at convallis quam. Integer consectetur mi nec magna tristique, non lobortis.
+                </p>
+                <p class="footer">Written by <span class="by-name">John Doe</span> on <span class="date">25/05/23</span></p>
+            </div>
+        </div>
+    </div>
+        <footer>
+            <button class="prev" onclick = "moveSlide(-1)">❮</button>
+            <button class="next" onclick="moveSlide(1)">❯</button>
+        </footer>
+        
 </body>
-	<script>
-        let slideIndex = 0;
-        const slides = document.getElementsByClassName("slides");
-        const dots = document.getElementsByClassName("dot");
-
-        function showSlide(index) {
-            if (index >= slides.length) {
-                slideIndex = 0;
-            } else if (index < 0) {
-                slideIndex = slides.length - 1;
-            } else {
-                slideIndex = index;
-            }
-            
-            // Hide all slides
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            
-            // Remove active class from dots
-            for (let i = 0; i < dots.length; i++){
-                dots[i].classList.remove("active");
-            }
-            
-            // Show the current slide and set active dot
-            slides[slideIndex].style.display = "block";
-            if (dots[slideIndex]) {
-                dots[slideIndex].classList.add("active");
-            }
-        }
-
-        // Initialize slide display
-        showSlide(slideIndex);
-
-        function moveSlide(n) {
-            showSlide(slideIndex + n);
-        }
-
-        function setSlide(index) {
-            showSlide(index);
-        }
-    </script>
 </html>

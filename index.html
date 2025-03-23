@@ -17,14 +17,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> 
 </head>
 <body>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg fixed-top">
         <div class="container ">
             <a class="navbar-brand" href="#">Home</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link ative" href="index.html" target="events">Home</a></li>
-                    <li class="nav-item"><a class="nav-link ative" href="event/techevent.html" target="events">Tech-Event</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.html" target="events">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="event/techevent.html" target="events">Tech-Event</a></li>
                     <li class="nav-item"><a class="nav-link" href="event/nontech.html" target="events">Non-Tech Event</a></li>
                     <li class="nav-item"><a class="nav-link" href="event/special.html" target="events">Online Game</a></li>
                     <li class="nav-item"><a class="nav-link" href="register/resgister.html" target="events">Registeration</a></li>
@@ -42,38 +42,34 @@
             <p id="sp1">HARNESS YOUR TALENT</p><br><br>
             <p id="sp1">04 - APRIL | JJCET </p>
     </div>
-    <div id="body1">
-        <div class="card1">
-            <div class="content">
-              <svg
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                    <path
-                    d="M20 9V5H4V9H20ZM20 11H4V19H20V11ZM3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3ZM5 12H8V17H5V12ZM5 6H7V8H5V6ZM9 6H11V8H9V6Z"
-                    ></path>
-                </svg>
-                <br>
-                <p class="one">Welcome to SPIRIT 2K25</p>
-                <p class="two">A National Level Technical Sympo conducted by department of IT in J.J College of Engineering and Technology </p>
-                <br>
-        
-                <div class="row" id="date">
-                    <div class="col">
-                        <p><i class="fa-solid fa-location-dot"></i>     Where</p><br><br>
-                        <p id="jjcet">  JJCET</p></p>
-                    </div>
-                    <div class="col">
-
-                        <p><i class="fa-solid fa-calendar-days"></i>   When</p><br><br><b></b>
-                        <p>04 - April</p>
-                    </div>
+    <div class="container2">
+        <div class="content">
+            <svg 
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+            d="M20 9V5H4V9H20ZM20 11H4V19H20V11ZM3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3ZM5 12H8V17H5V12ZM5 6H7V8H5V6ZM9 6H11V8H9V6Z"
+            ></path>
+            </svg>
+            <br>
+            <p class="one" >Welcome to SPIRIT 2K25</p>
+            <p class="two">A National Level Technical Sympo conducted by department of IT in J.J College of Engineering and Technology </p>
+            <br>
+            <div class="row" id="date">
+                <div class="col">
+                <p ><span class="iframe-icon"><i class="fa-solid fa-location-dot"></i> </span>    Where</p><br><br>
+                <p id="jjcet">  JJCET</p></p>
+                </div>
+                <div class="col"
+                <p ><span class="iframe-icon"><i class="fa-solid fa-calendar-days"></i></span>   When</p><br><br><b></b>
+                <p>04 - April</p>
             </div>
-          </div>
+        </div>
+        </div>
     </div>
-    </div>
-    <div align="center" id="foot">
-<foot class="row container" >
+<div align="center" id="foot">
+    <foot class="row container" >
         <div class="col" id="tech" align="center">
             <p id="info">Tech Event</p>
             <p id="no">4+</p>
@@ -84,8 +80,8 @@
         </div>
         <div class="col">
             <button onclick="fun()">
-            <svg
-            xmlns="http://www.w3.org/2000/svg"
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 36 36"
             width="36px"
             height="36px"
@@ -128,13 +124,7 @@
             <span class="play"><a href="event/event.html"  id="bu">Click</a></span> 
             </button>
         </div>
-</foot>
-    </div>
-      
-	
-		
-
+    </foot>
+</div>
 </body>
-    <script>
-    </script>
 </html>

@@ -1,28 +1,22 @@
 @import url('https://fonts.cdnfonts.com/css/code');
-
-.slides {
-    justify-content: center;
-    margin: 20px 29px;
+  #card {
+    /* background-color: rgba(255, 255, 255, 0.5);  */
+    /* color:white; */
+  }
+  #cardbody {
+    color: #089a36;
   }
   .card { 
-    padding: 15px;
+    padding: 10px;
     width: 300px;
+    margin-left: 14px;
     min-height: 310px;
     border-radius: 20px;
-    background: #e8e8e8;
-    box-shadow: 5px 5px 6px #dadada,-5px -5px 6px #f6f6f6;
-    transition: 0.4s;
-    line-height: 20px;
+    transition: 0.8s;
+    flex: 0 0 auto;
   }
-  
-  .card:hover {
-    translate: 0 -10px;
-  }
-  
   .card-title {
-    font-size: 17px;
-    font-weight: 900;
-    color: #2e54a7;
+    font-size: 18px;
     font-family: 'Code Bold', sans-serif;   
     margin-top: 25px;
     margin-left: 20px;
@@ -30,24 +24,19 @@
   
   .card-image {
     height: 170px;
-    background-color: #c9c9c9;
-    border-radius: 15px;
-    box-shadow: inset 8px 8px 10px #c3c3c3,
-    inset -8px -8px 10px #cfcfcf;
     overflow: hidden;
   }
   
   .card-body {
     margin-top: -30px;
-    color: rgb(0, 0, 0);
-    /* font-size: 12px; */
+    color: #089a36;
   }
   
   .footer {
+    margin: 20px;
     float: right;
     font-size: 13px;
-    color: #636363;
-    margin-left: 30px;
+    color: #000000;
   }
   
   .by-name {
@@ -65,7 +54,7 @@
     background: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    padding: 10px 15px;
+    padding: 15px 15px;
     font-size: 20px;
     cursor: pointer;
     border-radius: 50%;
@@ -81,18 +70,19 @@
   }
   
   button:hover {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(255, 255, 255, 0.8);
   }
+  
   .carousel {
+    margin-top: 80px;
     position: relative;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: row;
     gap: 30px;
-    width: 100%;
     overflow-x: auto;
-    padding-left: 10px;
+    padding: 10px 30px 70px 30px;
     scroll-snap-type: x mandatory;
     overflow-x: scroll;
   }
@@ -102,63 +92,39 @@
     padding: 10px 20px;
     border-radius: 5px;
   }
-  
-  
-  
-  .dots {
-    display: none;
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 8px;
-}
-
-.dot {
-  display: none;
-  width: 12px;
-  height: 12px;
-  background: rgba(209, 194, 194, 0.5);
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
 .dot.active {
-  background: rgb(130, 80, 80);
+  background: rgb(255, 255, 255);
 }
-.slides {
-  transition: transform 10s ease-in-out;
-}
-  .prev,
-  .next {
-    display: block;
-  }
-  
-  ::-webkit-scrollbar {
-    width: 12px;
-    height: 10px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 10px;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 10px;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background: #231c1c;
-  }
   footer {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 90px;
-  }
+    background-color: #000000;
 
+  }
+  .carousel {
+    scrollbar-width: bold;
+    scrollbar-shadow-color: #000000;
+    scrollbar-color: #089a36 #f1f1f1;
+  }
+  @media only screen and (min-width: 1200px) {
+    .carousel {
+      gap: 40px;
+      padding: 10px 500px 100px 300px;
+      }
+    .card:hover {
+      translate: 0 -10px;
+    }
+  }
+  #myVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: -1;
+    filter: brightness(40%);
+  }
 

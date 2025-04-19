@@ -1,8 +1,5 @@
 @import url('https://fonts.cdnfonts.com/css/code');
-  #card {
-    /* background-color: rgba(255, 255, 255, 0.5);  */
-    /* color:white; */
-  }
+  
   #cardbody {
     color: #089a36;
   }
@@ -16,10 +13,7 @@
     flex: 0 0 auto;
   }
   .card-title {
-    font-size: 18px;
     font-family: 'Code Bold', sans-serif;   
-    margin-top: 25px;
-    margin-left: 20px;
   }
   
   .card-image {
@@ -29,11 +23,10 @@
   
   .card-body {
     margin-top: -30px;
-    color: #089a36;
   }
   
   .footer {
-    margin: 20px;
+    margin: 10px;
     float: right;
     font-size: 13px;
     color: #000000;
@@ -47,32 +40,7 @@
     height: 100%;
     border-radius: 15px;
   }
-  .prev,
-  .next {
-    position: absolute;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 15px 15px;
-    font-size: 20px;
-    cursor: pointer;
-    border-radius: 50%;
-  }
-  .prev {
-    left: 10px;
-    transform: translateY(-50%);
-  }
-  
-  .next {
-    right: 10px;
-    transform: translateY(-50%);
-  }
-  
-  button:hover {
-    background: rgba(255, 255, 255, 0.8);
-  }
-  
+
   .carousel {
     margin-top: 80px;
     position: relative;
@@ -80,43 +48,12 @@
     height: 100%;
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 80px;
+    padding: 40px 500px;
     overflow-x: auto;
-    padding: 10px 30px 70px 30px;
     scroll-snap-type: x mandatory;
-    overflow-x: scroll;
   }
-  
-  .text {
-    background: rgba(0, 0, 0, 0.4);
-    padding: 10px 20px;
-    border-radius: 5px;
-  }
-.dot.active {
-  background: rgb(255, 255, 255);
-}
-  footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90px;
-    background-color: #000000;
-
-  }
-  .carousel {
-    scrollbar-width: bold;
-    scrollbar-shadow-color: #000000;
-    scrollbar-color: #089a36 #f1f1f1;
-  }
-  @media only screen and (min-width: 1200px) {
-    .carousel {
-      gap: 40px;
-      padding: 10px 500px 100px 300px;
-      }
-    .card:hover {
-      translate: 0 -10px;
-    }
-  }
+ 
   #myVideo {
     position: fixed;
     top: 0;
@@ -127,4 +64,97 @@
     z-index: -1;
     filter: brightness(40%);
   }
+  @media (max-width: 600px) {
+    .carousel {
+      padding: 20px;
+      gap: 20px;
+    }
+    
+    
+  }
+    
+ /* From Uiverse.io by mobinkakei */ 
+.cta {
+  display: flex;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  background: #6225e6;
+  transition: 1s;
+  box-shadow: 6px 6px 0 black;
+  transform: skewX(-15deg);
+  border: none;
+  cursor: pointer;
+}
 
+.cta:focus {
+  outline: none;
+}
+
+.cta:hover {
+  transition: 0.5s;
+  box-shadow: 10px 10px 0 #fbc638;
+}
+
+.cta .second {
+  transition: 0.5s;
+  margin-right: 0px;
+}
+
+.cta:hover .second {
+  transition: 0.5s;
+  margin-right: 45px;
+}
+
+.span {
+  transform: skewX(15deg);
+}
+
+.second {
+  width: 20px;
+  margin-left: 30px;
+  position: relative;
+  top: 12%;
+}
+
+.one {
+  transition: 0.4s;
+  transform: translateX(-60%);
+}
+
+.two {
+  transition: 0.5s;
+  transform: translateX(-30%);
+}
+
+.cta:hover .three {
+  animation: color_anim 1s infinite 0.2s;
+}
+
+.cta:hover .one {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
+}
+
+.cta:hover .two {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
+}
+
+@keyframes color_anim {
+  0% {
+    fill: white;
+  }
+
+  50% {
+    fill: #fbc638;
+  }
+
+  100% {
+    fill: white;
+  }
+}
+/* #butt{
+  width: 500px;
+} */
